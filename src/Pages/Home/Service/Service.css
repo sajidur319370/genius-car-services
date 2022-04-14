@@ -1,0 +1,15 @@
+.service-item{
+    border:  2px solid sandybrown;
+    padding: 10px;
+    border-radius: 10px;
+}
+.service-item img{
+    width: 100%;
+}
+.service-item button{
+    height: 40px;
+    width: 150px;
+    background-color: firebrick;
+    color: aliceblue;
+    border-radius: 5px;
+}
