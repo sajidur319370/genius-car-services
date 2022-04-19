@@ -1,7 +1,7 @@
 import React from "react";
-import googleIcon from "./google.png";
-import facebookIcon from "./facebook.png";
-import githubIcon from "./github.png";
+import googleIcon from "./socialIcon/google.png";
+import facebookIcon from "./socialIcon/facebook.png";
+import githubIcon from "./socialIcon/github.png";
 import {
   useSignInWithGithub,
   useSignInWithGoogle,
