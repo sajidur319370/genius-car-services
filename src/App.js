@@ -1,8 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import About from "./Pages/About/About";
 import AddService from "./Pages/AddService/AddService";
 import Checkout from "./Pages/Checkout/Checkout/Checkout";
+import Order from "./Pages/Checkout/Order/Order";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
@@ -51,9 +53,18 @@ function App() {
             </RequireAuth>
           }
         ></Route>
+        <Route
+          path="/order"
+          element={
+            <RequireAuth>
+              <Order></Order>
+            </RequireAuth>
+          }
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div>
   );
 }
