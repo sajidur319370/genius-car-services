@@ -19,13 +19,15 @@ const Checkout = () => {
       address: event.target.address.value,
       phone: event.target.phone.value,
     };
-    axios.post("http://localhost:5000/order", order).then((res) => {
-      const { data } = res;
-      if (data.insertedId) {
-        toast("Your order is booked");
-        event.target.reset();
-      }
-    });
+    axios
+      .post("https://afternoon-depths-73303.herokuapp.com/order", order)
+      .then((res) => {
+        const { data } = res;
+        if (data.insertedId) {
+          toast("Your order is booked");
+          event.target.reset();
+        }
+      });
   };
 
   return (
